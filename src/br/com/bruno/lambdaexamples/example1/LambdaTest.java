@@ -1,7 +1,5 @@
 package br.com.bruno.lambdaexamples.example1;
 
-import br.com.bruno.lambdaexamples.interfaces.RunnableExample;
-
 public class LambdaTest {
 
 	public static void main(String[] args) {
@@ -14,9 +12,9 @@ public class LambdaTest {
 
 	private static void usualImplementationTest() {
 		/*
-		 * Usando classe RunnableExample que implementa Runnable
+		 * Usando classe RunnableImplementationExample que implementa Runnable
 		 */
-		Runnable runnable = new RunnableExample();
+		Runnable runnable = new RunnableImplementationExample();
 		Thread thread = new Thread(runnable);
         thread.start();
 	}
@@ -51,7 +49,7 @@ public class LambdaTest {
 		/*
 		 * Usando lambda no lugar de classe anônima
 		 */
-		Runnable runnable = () -> { System.out.println("Running lambda 1..."); };
+		Runnable runnable = () -> {System.out.println("Running lambda 1...");};
 		Thread thread = new Thread(runnable);
         thread.start();
 	}
